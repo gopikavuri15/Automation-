@@ -1,0 +1,14 @@
+{
+  "name": "devops-monitoring-demo-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Node.js application for the DevOps monitoring demo",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "node dist/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

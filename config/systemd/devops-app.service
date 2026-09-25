@@ -1,0 +1,22 @@
+[Unit]
+Description=DevOps Monitoring Demo Application
+After=network.target
+
+[Service]
+Type=simple
+User=devopsapp
+Group=devopsapp
+WorkingDirectory=/opt/devops-monitoring/current
+Environment=HOST=127.0.0.1
+Environment=PORT=3001
+ExecStart=/usr/bin/node /opt/devops-monitoring/current/server.js
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/devops-monitoring
+
+[Install]
+WantedBy=multi-user.target
